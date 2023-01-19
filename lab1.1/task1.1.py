@@ -1,6 +1,6 @@
 import argparse
 
-parser = argparse.ArgumentParser(description='To calculate math result. enter number operation number')
+parser = argparse.ArgumentParser(description='To calculate math result enter number operation number')
 parser.add_argument('num1', type=int, help='first number')
 parser.add_argument('oprtn', type=str, help = "operation")  
 parser.add_argument('num2', type=int, help='second number')
