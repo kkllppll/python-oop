@@ -32,11 +32,11 @@ class Node:
         elif data > self.data[0]:
             return self.right.order(data) if self.right is not None else False
 
-    def get_cost(self, code, quantity):
+    def cost(self, code, quantity):
         try:
             return quantity * self.order(code)[1]
-        except TypeError:
-            print('The product does not exist.')
+        except 
+            print('The product doesn`t exist.')
 
 
     def PrintTree(self):
@@ -58,7 +58,7 @@ def get_products_cost(tree):
         raise ValueError
     for i in range(size):
         a = tuple(map(int, input('Code of a product: Quantity: (split numbers with space) ').split(' ')))
-        total += tree.get_cost(a[0], a[1])
+        total += tree.cost(a[0], a[1])
     return total  
 
 
