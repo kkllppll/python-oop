@@ -5,7 +5,7 @@ class Student():
         self._rec_book_num = rec_book_number
         
         self._grades = grades
-        self._average_score = average_score = None
+        self._average_score = None
 
     @property
     def name(self):
@@ -22,7 +22,6 @@ class Student():
 
     @property
     def average_score(self):
-      def average_score(self):
         if self._average_score is None:
             return sum(self._grades) / len(self._grades)
         return self._average_score
@@ -55,14 +54,14 @@ class Group():
   
 
     def top_students(self):
-        return sorted(self._group, key=lambda x: x.get_average,  reverse=True)[:5]
+        return sorted(self._groupname, key=lambda x: x.get_average,  reverse=True)[:5]
         
           
 
 
 
 S1 = Student("Victoria", "Monet", "1", 8, 8, 100, 77, 81)
-S2 = Student("Victoria", "Monet", "2", 60, 60, 98, 63, 61)
+#S2 = Student("Victoria", "Monet", "2", 60, 60, 98, 63, 61)
 S3 = Student("Mike", "Mike", "3", 86, 99, 88, 77, 81)
 S4 = Student("Elka", "Tpwks", "4", 100, 98, 65, 79, 88)
 S5 = Student("Alexa", "L", "5", 60, 60, 65, 63, 61)
@@ -71,14 +70,14 @@ S7 = Student("LLLL", "ppppp", "7", 60, 98, 65, 63, 61)
 S8 = Student("LLLL", "ppppp", "7", 60, 98, 65, 63, 61)
 
 
-group = Group("ТВ-з11", "TEF", 2, S1, S2, S3, S4, S5, S6, S7, S8)
+group = Group("ТВ-з11", "TEF", 2, S1, S3, S4, S5, S6, S7, S8)
 
 
 
-print("Student:", group.get_student(S1),"Average score:", S1.average_score)
-print("Student:", group.get_student(S2),"Average score:", S2.average_score)
+print("Student:", group.get_student(S4),"Average score:", S4.average_score)
+#print("Student:", group.get_student(S2),"Average score:", S2.average_score)
 
 
 
-print(''.join(str(i) for i in group.top_students()))
+#print(i for i in group.top_students())
 
