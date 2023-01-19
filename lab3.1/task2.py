@@ -59,7 +59,7 @@ def change_date():
 calendar = Calendar()
 number = input("Date: Today`s date (press 1), Your own date (press 2)")
 if number in ["1", "2"]:
-        if number == "1": print("Today", calendar.date)
+        if number == "1": print("Today is", calendar.date)
         elif number == "2":
             day = input("Enter:\n day --> ")
             month = input("month --> ")
